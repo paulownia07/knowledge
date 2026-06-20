@@ -1,0 +1,10 @@
+{   
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    "markdown.extension.tableFormatter.enabled": true,
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "markdown.extension.tableFormatter.delimiterRowNoPadding": true
+}

@@ -1,0 +1,12 @@
+title: Knowledge
+description: personal knowledge
+remote_theme: just-the-docs/just-the-docs
+
+url: https://kotarokirihara07.github.io
+
+aux_links:
+  Template Repository: https://github.com/KotaroKirihara07/templates
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
