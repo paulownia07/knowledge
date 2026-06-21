@@ -1,5 +1,5 @@
 ---
-title: Context
+title: MCP
 parent: AI
 layout: default
 nav_enabled: true

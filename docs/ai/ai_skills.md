@@ -1,5 +1,5 @@
 ---
-title: Context
+title: Skills
 parent: AI
 layout: default
 nav_enabled: true
