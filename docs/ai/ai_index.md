@@ -1,8 +1,8 @@
 ---
-title: AWS
+title: AI
 layout: default
 nav_enabled: true
-nav_order: 12
+nav_order: 10
 ---
 
-# AWS
+# AI
