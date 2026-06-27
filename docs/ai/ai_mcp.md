@@ -23,3 +23,52 @@ nav_order: 4
 | [Fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)                 | WebページをMarkdown形式に変換できるMCPサーバ                    |
 
 ---
+
+### MCPサーバ構成ファイル
+
+```json
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "xxxxx",
+      "description": "?????",
+      "password": true
+    }
+  ],
+  "servers": {
+    "<mcp_name>": {
+      "type": "http",
+      "url": "https://???????/mcp/"
+    }
+  }
+}
+```
+
+#### servers (http/sseサーバの場合)
+
+MCPサーバの設定を定義する
+
+| component                     | description                                                                | type                     |
+| ----------------------------- | -------------------------------------------------------------------------- | ------------------------ |
+| `.servers.<mcp_name>.type`    | サーバタイプを指定する (`"http"\|"sse"\|"stdio"`)                          | `"http"\|"sse"\|"stdio"` |
+| `.servers.<mcp_name>.url`     | MCPサーバエンドポイントのURLを指定する                                     | `"http"\|"sse"`          |
+| `.servers.<mcp_name>.headers` | MCPサーバへのリクエストヘッダを指定する                                    | `"http"\|"sse"`          |
+| `.servers.<mcp_name>.command` | MCPサーバを起動するコマンドを指定する (`"npx"\|"uvx"\|"python"\|"docker"`) | `"stdio"`                |
+| `.servers.<mcp_name>.args`    | MCPサーバを起動するためのコマンドの引数をリスト形式で指定する              | `"stdio"`                |
+| `.servers.<mcp_name>.env`     | MCPサーバを起動するためのコマンドで使用する環境変数を指定する              | `"stdio"`                |
+
+#### inputs
+
+MCPサーバ起動時に必要な入力値を指定する
+
+| component            | description                                     | type                           |
+| -------------------- | ----------------------------------------------- | ------------------------------ |
+| `inputs.type`        | 入力値のタイプ (`"promptString"\|"pickString"`) | `"promptString"\|"pickString"` |
+| `inputs.id`          | 入力値を一意に特定するID                        | `"promptString"\|"pickString"` |
+| `inputs.description` | 入力値の説明                                    | `"promptString"\|"pickString"` |
+| `inputs.default`     | 入力値のデフォルト                              | `"promptString"\|"pickString"` |
+| `inputs.password`    | 入力値が機微情報であるか (`true\|false`)        | `"promptString"`               |
+| `inputs.options`     | 選択肢のリスト                                  | `"pickString"`                 |
+
+---
