@@ -5,4 +5,4 @@ nav_enabled: true
 nav_order: 160
 ---
 
-# Linux
+# PostgreSQL
