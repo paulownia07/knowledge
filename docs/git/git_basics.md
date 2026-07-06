@@ -1,9 +1,9 @@
 ---
-title: command
+title: basics
 parent: Git
 layout: default
 nav_enabled: true
-nav_order: 4
+nav_order: 3
 ---
 
-# Git Command
+# basics
