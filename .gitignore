@@ -18,7 +18,6 @@ vendor/
 docs/apache_spark/*
 docs/python/python_pytest.md
 docs/databricks/*
-docs/docker/*
 docs/django/*
 docs/java/*
 docs/javascript/*
