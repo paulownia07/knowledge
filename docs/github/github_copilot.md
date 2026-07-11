@@ -17,9 +17,12 @@ my-project/
 │  ├─ instructions/
 │  │  ├─ python.instructions.md
 │  │  └─ docs.instructions.md
-│  └─ prompts/
-│     ├─ review.prompt.md
-│     └─ design.prompt.md
+│  ├─ prompts/
+│  │  ├─ review.prompt.md
+│  │  └─ design.prompt.
+│  └─ skills/
+│     └─ <skill-name>/
+|         └─ SKILL.md
 ├─ AGENTS.md
 ├─ src/
 └─ docs/
@@ -140,6 +143,12 @@ description: '???' <!-- このファイルの説明を記述する -->
 ????????????????????
 ????????????????????
 ```
+
+---
+
+### スキル
+
+ファイル名は`SKILL.md`であり、`.github/skills/<skill-name>/`に配置する
 
 ---
 
