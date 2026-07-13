@@ -17,6 +17,7 @@ vendor/
 # Ignore pending folders
 docs/apache_spark/*
 docs/python/python_pytest.md
+docs/python/python_uv.md
 docs/databricks/*
 docs/django/*
 docs/java/*
