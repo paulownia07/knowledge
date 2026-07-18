@@ -11,7 +11,7 @@ nav_order: 3
 ## 一般的なプロジェクトのファイル構成
 
 ```
-my-project/
+project-name/
 ├─ .github/
 │  ├─ copilot-instructions.md
 │  ├─ instructions/
@@ -23,6 +23,9 @@ my-project/
 │  └─ skills/
 │     └─ <skill-name>/
 |         └─ SKILL.md
+├─ .vscode/
+│  ├─ mcp.json
+│  └─ toolsets.jsonc
 ├─ AGENTS.md
 ├─ src/
 └─ docs/
@@ -41,14 +44,15 @@ my-project/
 
 ### インラインチャット画面での便利なショートカット
 
-| shortcut                                                     | description                            |
-| ------------------------------------------------------------ | -------------------------------------- |
-| <kbd>Tab</kbd>                                               | コード補完の受け入れ                   |
-| <kbd>Esc</kbd>                                               | コード補完の拒否                       |
-| <kbd>Ctrl</kbd>+<kbd>→</kbd>                                 | 次の単語までのコード補完の受け入れ     |
-| <kbd>Ctrl</kbd>+<kbd>]</kbd>                                 | コードの補完の次の候補を表示           |
-| <kbd>Ctrl</kbd>+<kbd>[</kbd>                                 | コードの補完の前の候補を表示           |
-| <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd> | GitHub Copilotチャットへカーソルを移動 |
+| shortcut                                      | description                            |
+| --------------------------------------------- | -------------------------------------- |
+| <kbd>Tab</kbd>                                | コード補完の受け入れ                   |
+| <kbd>Esc</kbd>                                | コード補完の拒否                       |
+| <kbd>Ctrl</kbd>+<kbd>→</kbd>                  | 次の単語までのコード補完の受け入れ     |
+| <kbd>Ctrl</kbd>+<kbd>]</kbd>                  | コードの補完の次の候補を表示           |
+| <kbd>Ctrl</kbd>+<kbd>[</kbd>                  | コードの補完の前の候補を表示           |
+| <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> | GitHub Copilotチャットへカーソルを移動 |
+| <kbd>Ctrl</kbd>+<kbd>I</kbd>                  | インラインチャットを起動               |
 
 ---
 
@@ -77,6 +81,8 @@ my-project/
 | `@azure`     | Azure                  |
 
 ### [スラッシュコマンド](https://code.visualstudio.com/docs/agents/reference/ai-features-cheat-sheet#_slash-commands)
+
+特定のアクションや機能を直接呼び出せる仕組み。
 
 | command     | descriptioin                             |
 | ----------- | ---------------------------------------- |
@@ -110,14 +116,13 @@ my-project/
 
 ### プロンプトファイル
 
-独自にプロンプトファイルを作成することができる  
 ファイルの拡張子は`.prompt.md`であり、`.github/prompts/`に配置する  
 ファイル名が`sample_prompt.prompt.md`の場合、`/sample_prompt`で呼び出す
 
 ```
 ---
 mode: '???' <!-- ask, plan, agentの3つから選択 -->
-model: ??? <!-- モデルを指定する -->
+model: ??? <!-- AIモデルを指定する -->
 tools: ['???', '???', '???'] <!-- 使用するツールをリスト形式で記述する -->
 description: '???' <!-- このファイルの説明を記述する -->
 ---
@@ -126,6 +131,18 @@ description: '???' <!-- このファイルの説明を記述する -->
 ????????????????????
 ????????????????????
 ```
+
+プロンプトファイル内で使用可能な変数
+
+| variable                      | description                          |
+| ----------------------------- | ------------------------------------ |
+| `${workspaceFolder}`          | 現在のワークスペースフォルダのパス   |
+| `${workspaceFolderBasename}`  | 現在のワークスペースフォルダの名前   |
+| `${selection}`                | 選択しているコードの内容             |
+| `${file}`                     | 現在のファイルのパス                 |
+| `${fileBasename}`             | 現在のファイル名(拡張子あり)         |
+| `${fileBasenameNotExtension}` | 現在のファイル名(拡張子なし)         |
+| `${fileDirname}`              | ファイルが存在するディレクトリのパス |
 
 ### カスタムインストラクション
 
@@ -169,11 +186,11 @@ MCPサーバの設定ファイルは`.vscode/mcp.json`に登録する
 ### ツールセット
 
 複数のツールを管理するためのファイル  
-拡張子は`.jsonc`
+拡張子は`.jsonc`であり、`.vscode/`に配置する
 
 ```jsonc
 {
-  "toolset_name": {
+  "<toolset_name>": {
     "tools": ["tool_name", "tool_name", "tool_name"],
     "description": "?????",
     "icon": "???",
