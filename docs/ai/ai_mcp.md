@@ -16,8 +16,9 @@ nav_order: 4
 | [Terraform MCP Server](https://github.com/hashicorp/terraform-mcp-server)                    | TerraformのMCPサーバ                                            |
 | [Azure MCP Server](https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/)      | AzureのMCPサーバ                                                |
 | [Google Cloud MCP Servers](https://docs.cloud.google.com/mcp)                                | Google CloudのMCPサーバ                                         |
-| [GitHub MCP Server](https://github.com/github/github-mcp-server)                             | GitHubを操作可能にする公式MCPサーバ                             |
-| [FileSystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)       | FileSystemを操作するMCPサーバ                                   |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server)                             | GitHubを操作可能にするMCPサーバ                                 |
+| [Microsoft Learn MCP Server](https://learn.microsoft.com/ja-jp/training/support/mcp)         | Microsoftの公式ドキュメントから直接取得可能にするMCPサーバ      |
+| [FileSystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)       | FileSystemを操作可能にするMCPサーバ                             |
 | [Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)                     | Claude Desktopをターミナルやファインダーのように扱えるMCPサーバ |
 | [Context7](https://github.com/upstash/context7)                                              | 最新ライブラリの知識をLLMに提供するためのMCPサーバ              |
 | [Fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)                 | WebページをMarkdown形式に変換できるMCPサーバ                    |
