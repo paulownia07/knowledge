@@ -1,12 +1,12 @@
 ---
-title: Python coding standards
+title: Style Guide
 parent: Python
 layout: default
 nav_enabled: true
-nav_order: 3
+nav_order: 2
 ---
 
-# Python coding standards
+# Style Guide
 
 ## PEP8
 
