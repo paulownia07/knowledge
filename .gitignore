@@ -35,15 +35,6 @@ docs/linux/linux_r*
 docs/linux/linux_s*
 docs/linux/linux_t*
 docs/linux/linux_v*
-docs/python/python_boto3.md
-docs/python/python_c*
-docs/python/python_g*
-docs/python/python_j*
-docs/python/python_m*
-docs/python/python_p*
-docs/python/python_r*
-docs/python/python_stre*
-docs/python/python_t*
-docs/python/python_x*
+docs/python/WIP*
 docs/snowflake/*
 docs/vscode/*
