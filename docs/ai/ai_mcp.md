@@ -22,6 +22,7 @@ nav_order: 4
 | [Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)                     | Claude Desktopをターミナルやファインダーのように扱えるMCPサーバ |
 | [Context7](https://github.com/upstash/context7)                                              | 最新ライブラリの知識をLLMに提供するためのMCPサーバ              |
 | [Fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)                 | WebページをMarkdown形式に変換できるMCPサーバ                    |
+| [draw.io MCP server](https://www.drawio.com/docs/manual/generate/drawio-mcp-server/)         | draw.ioのMCPサーバ                                              |
 
 ---
 
