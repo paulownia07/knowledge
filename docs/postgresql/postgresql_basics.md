@@ -91,3 +91,9 @@ $PGDATA/               # 上記の /home/postgres/data に対応
   `FROM` → `WHERE` → `GROUP BY` → `HAVING` → `SELECT` → `ORDER BY`
 
 ---
+
+## pgAdmin
+
+[pgAdmin](https://www.pgadmin.org/)はPostgreSQLを視覚的に管理・操作できるオープンソースのGUIツール
+
+---
