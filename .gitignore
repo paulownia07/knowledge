@@ -16,6 +16,7 @@ vendor/
 
 # Ignore pending folders
 docs/apache_spark/*
+docs/claude/WIP*
 docs/databricks/*
 docs/django/*
 docs/java/WIP*
