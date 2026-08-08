@@ -15,15 +15,16 @@ _site/
 vendor/
 
 # Ignore pending folders
+docs/ai/WIP*
 docs/apache_spark/*
 docs/claude/WIP*
-docs/databricks/*
-docs/django/*
+docs/databricks/WIP*
+docs/django/WIP*
 docs/github/WIP*
 docs/java/WIP*
-docs/javascript/*
-docs/kubernetes/*
+docs/javascript/WIP*
+docs/kubernetes/WIP*
 docs/linux/WIP*
 docs/python/WIP*
-docs/snowflake/*
-docs/vscode/*
+docs/snowflake/WIP*
+docs/vscode/WIP*
