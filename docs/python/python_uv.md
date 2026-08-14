@@ -12,7 +12,7 @@ nav_order: 4
 
 ## import
 
-```
+```Python
 import uv
 ```
 
@@ -20,7 +20,7 @@ import uv
 
 ## project.toml
 
-```
+```toml
 [project]
 name = "myapp"
 version = "0.1.0"
@@ -40,7 +40,7 @@ dependencies = [
 
 以下のコードを実行すると`project.toml`が自動的に更新される
 
-```
+```bash
 uv add pandas
 ```
 
@@ -48,7 +48,7 @@ uv add pandas
 
 ## 依存関係のインストール
 
-```
+```bash
 uv sync
 ```
 
@@ -56,7 +56,7 @@ uv sync
 
 ## ファイルの実行
 
-```
+```bash
 uv run python main.py
 ```
 
