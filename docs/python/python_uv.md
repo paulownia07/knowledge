@@ -18,7 +18,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ---
 
-## project.toml
+## pyproject.toml
 
 ```toml
 [project]
@@ -58,7 +58,7 @@ uv init
 
 ## 依存関係のアップデート
 
-`pyproject.toml`を更新して、`uv.lock`に反映させる
+`pyproject.toml`の更新を`uv.lock`に反映させる
 
 ```bash
 uv update
