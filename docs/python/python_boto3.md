@@ -14,7 +14,7 @@ nav_order: 4
 
 ## モジュールの読み込み
 
-```Python
+```python
 import boto3
 ```
 

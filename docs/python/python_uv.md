@@ -3,7 +3,7 @@ title: uv
 parent: Python
 layout: default
 nav_enabled: true
-nav_order: 4
+nav_order: 2
 ---
 
 # uv
