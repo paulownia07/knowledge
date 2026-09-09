@@ -10,10 +10,10 @@ nav_order: 4
 
 [uv](https://docs.astral.sh/uv/)とは、Astral社がRustで開発した超高速な次世代パッケージ兼プロジェクト管理ツール
 
-## import
+## インストール
 
-```Python
-import uv
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ---
@@ -38,7 +38,7 @@ dependencies = [
 
 ## ライブラリの追加
 
-以下のコードを実行すると`project.toml`が自動的に更新される
+以下のコードを実行すると`pyproject.toml`が更新される
 
 ```bash
 uv add pandas
@@ -46,7 +46,29 @@ uv add pandas
 
 ---
 
+## プロジェクトの作成
+
+`pyproject.toml`などが自動的に作成される
+
+```bash
+uv init
+```
+
+---
+
+## 依存関係のアップデート
+
+`pyproject.toml`を更新して、`uv.lock`に反映させる
+
+```bash
+uv update
+```
+
+---
+
 ## 依存関係のインストール
+
+`uv.lock`に記録された依存関係をインストールする
 
 ```bash
 uv sync

@@ -45,7 +45,7 @@ flake8・isort・pydocstyle・blackの多くを代替する統合ツール
 Pythonの新規プロジェクトであれば、特別な理由がなければ 「Ruff + mypy」 を採用しておくと、シンプルかつ高速な構成になる
 
 ```
-# project.toml
+# pyproject.toml
 [tool.ruff]
 target-version = "py311"
 line-length = 88
