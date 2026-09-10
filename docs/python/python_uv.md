@@ -12,7 +12,7 @@ nav_order: 2
 
 ## インストール
 
-```bash
+```
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
@@ -40,7 +40,7 @@ dependencies = [
 
 以下のコードを実行すると`pyproject.toml`が更新される
 
-```bash
+```
 uv add pandas
 ```
 
@@ -50,7 +50,7 @@ uv add pandas
 
 `pyproject.toml`などが自動的に作成される
 
-```bash
+```
 uv init
 ```
 
@@ -60,8 +60,8 @@ uv init
 
 `pyproject.toml`の更新を`uv.lock`に反映させる
 
-```bash
-uv update
+```
+uv lock
 ```
 
 ---
@@ -78,7 +78,7 @@ uv sync
 
 ## ファイルの実行
 
-```bash
+```
 uv run python main.py
 ```
 
