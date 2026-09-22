@@ -1,6 +1,6 @@
 ---
 title: Body of Knowledge
-parent: general
+parent: General
 layout: default
 nav_enabled: true
 nav_order: 1
