@@ -1,8 +1,8 @@
 ---
-title: general
+title: General
 layout: default
 nav_enabled: true
-nav_order: 1
+nav_order: 2
 ---
 
-# general
+# General
