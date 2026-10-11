@@ -22,12 +22,19 @@ nav_order: 5
 
 Windows
 
-- WSL: Ubuntu 22.04
-- VSCode: Dev Containers拡張機能
+- WSL: Ubuntu 26.04
+- VSCode: Dev Containers拡張機能 (pre-release)
+- WSL (3.0以上)
 
-Ubuntu (WSL)
+---
 
-- Docker Engine
+## settings.json (ユーザ設定)
+
+```json
+{
+    "dev.containers.dockerPath": "wslc"
+}
+```
 
 ---
 
@@ -38,7 +45,6 @@ project-name/
 ├─ .devcontainer/
 │  ├─ devcontainer.json
 │  └─ Dockerfile
-├─ pyproject.toml
 ├─ src/
 └─ docs/
 ```
