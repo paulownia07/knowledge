@@ -34,6 +34,15 @@ nav_order: 2
 
 [credential]
     helper = manager
+
+[credential "https://xxx.com"]
+    username = your.email@example.com
+    helper = manager
+
+[http "https://yyy.com"]
+    proxy = http://zzz.zzz.zzz.zzz:8080
+    sslCAInfo = /path/to/ca-certificate.pem
+    helper = manager
 ```
 
 ---
