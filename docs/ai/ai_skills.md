@@ -10,7 +10,7 @@ nav_order: 3
 
 ## SKILL.mdの構成
 
-```Markdown
+```
 ---
 name: skill_name
 description: 'Skill's description.'
@@ -21,7 +21,9 @@ description: 'Skill's description.'
 
 ### aaaaaaaaaaaaaaaaaaaa
 
+
 ### aaaaaaaaaaaaaaaaaaaa
+
 
 ```
 
