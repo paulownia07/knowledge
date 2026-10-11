@@ -23,12 +23,14 @@ nav_order: 2
    ```
 
 2. 「AWS Access Key ID」、「AWS Secret Access Key」、「Default region name」、「Default output format」を以下のように入力する
+
    ```
    AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
    AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
    Default region name [None]: ap-northeast-1
    Default output format [None]: json
    ```
+
 3. `.aws/config`を以下のように編集する
 
    ```
@@ -53,20 +55,26 @@ nav_order: 2
 1. [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/)でコマンドを調査する
 2. `params.json`を作成する
 3. 入力パラメータのテンプレートを取得して、`params.json`にペーストする
+
    ```
    aws <command> <subcommand> --generate-cli-skeleton
    ```
+
 4. `params.json`を編集する
 5. 環境変数`AWS_PROFILE`に使用するプロファイル名を設定する
+
    ```
    #Windows
    set AWS_PROFILE=developer
    ```
+
    ```
    #Linux
    export AWS_PROFILE=developer
    ```
+
 6. ファイルからのパラメータ入力してコマンドを実行する
+
    ```
    aws <command> <subcommand> --cli-input-json file://params.json
    ```
