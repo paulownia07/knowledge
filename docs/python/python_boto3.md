@@ -24,9 +24,7 @@ import boto3
 
 ### バケット一覧を取得
 
-```Python
-import boto3
-
+```python
 s3 = boto3.client("s3")
 response = s3.list_buckets()
 bucket_list = [bucket["Name"] for bucket in response["Buckets"]]
@@ -34,9 +32,7 @@ bucket_list = [bucket["Name"] for bucket in response["Buckets"]]
 
 ### バケット内のオブジェクトの一覧を取得
 
-```Python
-import boto3
-
+```python
 s3 = boto3.resource('s3')
 bucket = s3.Bucket(bucket_name)
 object_list = [object.key for object in bucket.objects.all()]
@@ -44,9 +40,7 @@ object_list = [object.key for object in bucket.objects.all()]
 
 ### 特定のフォルダ内のファイル一覧取得
 
-```Python
-import boto3
-
+```python
 s3_client = boto3.client("s3")
 response = s3_client.list_objects_v2(Bucket=bucket_name, Prefix="path/to/source/")
 files = [obj["Key"] for obj in response.get("Contents", [])]
@@ -54,10 +48,9 @@ files = [obj["Key"] for obj in response.get("Contents", [])]
 
 ### CSVファイルを読み込む
 
-```Python
+```python
 import io
 import pandas
-import boto3
 
 s3_client = boto3.client("s3")
 response = s3_client.get_object(Bucket=bucket_name, Key="path/to/source/file.csv")
@@ -67,9 +60,7 @@ df = pd.read_csv(io.StringIO(csv_content))
 
 ### テキストファイルを読み込む
 
-```Python
-import boto3
-
+```python
 s3_client = boto3.client("s3")
 response = s3_client.get_object(Bucket=bucket_name, Key="path/to/source/file.txt")
 #ファイル全体を読み込む
@@ -78,11 +69,10 @@ contents = response["Body"].read().decode("utf-8")
 rows = contents.splitlines()
 ```
 
-#XMLファイルを読み込む
+### XMLファイルを読み込む
 
-```Python
+```python
 import xml.etree.ElementTree as ET
-import boto3
 
 s3_client = boto3.client("s3")
 response = s3_client.get_object(Bucket=bucket_name, Key="path/to/source/file.xml")
@@ -90,11 +80,10 @@ xml_content = response["Body"].read().decode("utf-8")
 root = ET.fromstring(xml_content)
 ```
 
-#JSONファイルを読み込む
+### JSONファイルを読み込む
 
-```Python
+```python
 import json
-import boto3
 
 s3_client = boto3.client("s3")
 response = s3_client.get_object(Bucket=bucket_name, Key="path/to/source/file.xml")
@@ -102,30 +91,18 @@ json_content = response["Body"].read().decode("utf-8")
 parsed_data = json.loads(json_content)
 ```
 
-#ファイルを作成して上書き保存する
+### ファイルを作成して上書き保存する
 
-```Python
-import boto3
-
+```python
 s3_client = boto3.client("s3")
 response = s3_client.put_object(Body=contents, Bucket=bucket_name, Key="path/to/source/file.txt")
 ```
 
-#ファイルをアップロードする
+### ファイルをアップロードする/ダウンロードする
 
-```Python
-import boto3
-
+```python
 s3_client = boto3.client("s3")
 s3.upload_file("local/path/file.txt", bucket_name, "s3/path/file.txt")
-```
-
-#ファイルをダウンロードする
-
-```Python
-import boto3
-
-s3_client = boto3.client("s3")
 s3_client.download_file(bucket_name, "s3/path/file.txt", "local/path/file.txt")
 ```
 
