@@ -5,6 +5,7 @@
     },
     "remoteUser": "vscode",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "postCreateCommand": "bash .devcontainer/post-create.sh",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -25,7 +26,12 @@
                 "markdownlint.run": "onSave",
                 "markdown.updateLinksOnFileMove.enabled": "always",
                 "markdown.preview.scrollPreviewWithEditor": true,
-                "markdown.preview.scrollEditorWithPreview": true
+                "markdown.preview.scrollEditorWithPreview": true,
+                "github.copilot.chat.commitMessageGeneration.instructions": [
+                    {
+                        "file": ".github/instructions/commit.instructions.md"
+                    }
+                ],
             }
         }
     }
