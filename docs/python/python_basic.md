@@ -16,12 +16,12 @@ nav_order: 3
 
 ## コメント
 
-```
+```python
 # 単一行コメント
 # コメント
 ```
 
-```
+```python
 # 複数行コメント
 ''' コメント '''
 ```
@@ -30,17 +30,17 @@ nav_order: 3
 
 ## 変数
 
-```
+```python
 # 変数の初期化
 num = 100
 ```
 
-```
+```python
 # 変数の削除
 del num
 ```
 
-```
+```python
 # 定数の定義 (変更は可能)
 FIXED_VALUE = 10
 ```
@@ -87,22 +87,22 @@ FIXED_VALUE = 10
 
 ## 標準入力
 
-```
+```python
 # 文字列を入力する
 text = input("文字列を入力してください")
 ```
 
-```
+```python
 # 単一の整数値を入力する
 num = int(input("数値を入力してください"))
 ```
 
-```
+```python
 # 1行で複数の整数値を入力する
 a, b, c = map(int, input().split())
 ```
 
-```
+```python
 # 1行で複数の整数値を入力してリスト化する
 num_list = list(map(int, input().split()))
 ```
@@ -111,12 +111,12 @@ num_list = list(map(int, input().split()))
 
 ## 標準出力
 
-```
+```python
 # 出力 (改行あり)
 print(x)
 ```
 
-```
+```python
 # 出力 (改行なし)
 print(x, end=" ")
 ```
@@ -130,22 +130,22 @@ print(x, end=" ")
 
 ## 文字列
 
-```
+```python
 # 変数への代入
 text = "aaa-bbb-ccc"
 ```
 
-```
+```python
 # n番目の文字を取り出す
 text[n]
 ```
 
-```
+```python
 # nからm番目までの文字列を取り出す
 text[n:m+1]
 ```
 
-```
+```python
 # フォーマット文字列
 text = "Hello! {}さん!".format(name)
 text = f"Hello! {name}さん!"
@@ -185,19 +185,19 @@ text = f"Hello! {name}さん!"
 
 ## 繰り返し
 
-```
+```python
 # リスト内の要素を変数に格納するループ処理
 for x in list1:
     pass
 ```
 
-```
+```python
 # 指定回数分のループ処理
 for x in range(10):
     pass
 ```
 
-```
+```python
 # breakとcontinueを含むループ処理
 for x in range(0, 10):
     if x == 4:
@@ -206,24 +206,24 @@ for x in range(0, 10):
         break
 ```
 
-```
+```python
 # 辞書のループ処理
 for x in dic1.keys():
 for x in dic1.values():
 for key, value in dic1.items():
 ```
 
-```
+```python
 # カウンタありのループ処理(idxはインデックス、valueは値)
 for idx, value enumerate(list1):
 ```
 
-```
+```python
 # 複数のリストを同時にループ処理
 for val1, val2 in zip(list1, list2):
 ```
 
-```
+```python
 # while文
 while (i < 10):
     i += 1
@@ -233,7 +233,7 @@ while (i < 10):
 
 ## 条件分岐
 
-```
+```python
 # 条件分岐
 if condition1:
     pass
@@ -243,7 +243,7 @@ else:
     pass
 ```
 
-```
+```python
 # 三項演算子 (signが0のときvalueが0、その他のとき1)
 value = 0 if sign == 0 else 1
 ```
@@ -263,7 +263,7 @@ value = 0 if sign == 0 else 1
 | `BaseException`     | すべての例外のスーパークラス                           |
 | `Exception`         | システム終了以外のすべての組み込み例外のスーパークラス |
 
-```
+```python
 try:
     # 例外が起こる可能性がある処理
 except <exception class>:
@@ -276,12 +276,12 @@ finally:
     # 例外の有無に関わらず実行する終了時の処理
 ```
 
-```
+```python
 # 例外を投げる
 raise <exception object>
 ```
 
-```
+```python
 # アサートを使用する (条件式が偽の場合、メッセージを出力して、AssertionErrorを発生させる)
 assert condition, "message"
 ```
@@ -290,7 +290,7 @@ assert condition, "message"
 
 ## モジュール
 
-```
+```python
 # モジュールの作成 (ファイル名をperson.pyとした場合、モジュール名はpersonとなる)
 
 import sys
@@ -312,12 +312,12 @@ class Person():
 
 ```
 
-```
+```python
 # モジュールのインポートその1
 from モジュール名 import クラス名/関数名
 ```
 
-```
+```python
 # モジュールのインポートその2
 import パッケージ名.モジュール名 as 別名
 ```
@@ -348,7 +348,7 @@ pkg/
 2. setup.pyが配置してあるディレクトリに移動する
 3. `pip install .`
 
-```
+```python
 # setup.pyの例
 from setuptools import setup, find_packages
 
