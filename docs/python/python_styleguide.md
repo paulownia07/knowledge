@@ -31,11 +31,63 @@ nav_order: 2
 
 ## PEP257
 
-PEP257はDocstringの規約
+[PEP 257](https://peps.python.org/pep-0257/)は、モジュール・クラス・関数などのDocstringの書き方に関する規約です。Docstringは定義の直後に置く文字列で、`help()`やドキュメント生成ツールから参照できます。引数や戻り値などの詳しい記述形式は、Google styleやNumPy styleなどの規約で定められています。
 
-| checker      | description |
-| ------------ | ----------- |
-| `pydocstyle` |             |
+- 三重ダブルクォート（`"""`）で囲む
+- 1行目に対象の概要を簡潔に書く
+- 複数行の場合は、概要の後に空行を入れて詳細を書く
+
+| checker      | description                                          |
+| ------------ | ---------------------------------------------------- |
+| `pydocstyle` | DocstringがPEP 257などの規約に沿っているかを検査する |
+
+### Google style
+
+Google styleは、引数や戻り値などを見出しごとに記述する形式です。型は名前の後に括弧で書きます。
+
+```python
+"""このモジュールの説明。"""
+
+class User:
+    """ユーザーを表すクラス。"""
+
+    def greet(self, name: str) -> str:
+        """名前を指定して挨拶する。
+
+        Args:
+            name (str): 挨拶する相手の名前。
+
+        Returns:
+            str: 挨拶のメッセージ。
+        """
+        return f"こんにちは、{name}さん"
+```
+
+### NumPy style
+
+NumPy styleは、項目名・型・説明を分けて記述する形式です。`Parameters`や`Returns`の下に区切り線を置きます。
+
+```python
+"""このモジュールの説明。"""
+
+class User:
+    """ユーザーを表すクラス。"""
+
+    def greet(self, name: str) -> str:
+        """名前を指定して挨拶する。
+
+        Parameters
+        ----------
+        name : str
+            挨拶する相手の名前。
+
+        Returns
+        -------
+        str
+            挨拶のメッセージ。
+        """
+        return f"こんにちは、{name}さん"
+```
 
 ---
 
