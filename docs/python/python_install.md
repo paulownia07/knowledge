@@ -13,6 +13,7 @@ nav_order: 1
 1. [公式サイト](https://www.python.org/)からダウンロード
 2. パスを自動で通すようにしてインストール
 3. インストールに成功したか確認する
+
    ```
    python --version
    ```
@@ -22,10 +23,13 @@ nav_order: 1
 ## Ubuntu
 
 1. python x.yをインストールする
+
    ```
    sudo yum install pythonxy
    ```
+
 2. インストールに成功したか確認する
+
    ```
    python --version
    ```

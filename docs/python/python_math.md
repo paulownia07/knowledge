@@ -14,7 +14,7 @@ nav_order: 4
 
 ## モジュールの読み込み
 
-```Python
+```python
 import math
 ```
 
@@ -22,8 +22,8 @@ import math
 
 ## 数学定数
 
-| constant | description       |
-| -------- | ----------------- |
+| constant   | description       |
+| ---------- | ----------------- |
 | `math.pi`  | 円周率            |
 | `math.e`   | ネイピア数        |
 | `math.inf` | 正の無限大        |
@@ -33,8 +33,8 @@ import math
 
 ## メソッド
 
-| method                | description                |
-| --------------------- | -------------------------- |
+| method                  | description                |
+| ----------------------- | -------------------------- |
 | `math.exp(x)`           | eのx乗                     |
 | `math.radians(180)`     | 度数法から弧度法への変換   |
 | `math.degrees(math.pi)` | 弧度法から度数法への変換   |

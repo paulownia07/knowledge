@@ -14,7 +14,7 @@ nav_order: 4
 
 ## モジュールの読み込み
 
-```Python
+```python
 import json
 ```
 
@@ -24,14 +24,14 @@ import json
 
 ### JSON形式のファイルを読み込こんで辞書形式へ変換する
 
-```Python
+```python
 json_open = open('file_name.json', 'r')
 json_load = json.load(json_open)
 ```
 
 ### 辞書形式のデータをJSON形式に変換してファイルに書き込む
 
-```Python
+```python
 with open('./file_name.json', 'w') as f:
   json.dump(sample_dict, f, indent=4)
 ```

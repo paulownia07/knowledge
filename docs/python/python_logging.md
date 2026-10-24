@@ -14,7 +14,7 @@ nav_order: 4
 
 ## モジュールの読み込み
 
-```
+```python
 import logging
 ```
 
@@ -86,9 +86,7 @@ project/
 
 ### logging_config.py
 
-```
-import logging
-
+```python
 def setup_logging() -> None:
     logging.basicConfig(
         level=logging.INFO,
@@ -104,9 +102,7 @@ def setup_logging() -> None:
 
 ### service.py
 
-```
-import logging
-
+```python
 logger = logging.getLogger(__name__)
 
 def execute() -> None:
@@ -115,7 +111,7 @@ def execute() -> None:
 
 ### main.py
 
-```
+```python
 from logging_config import setup_logging
 
 from app.service import execute

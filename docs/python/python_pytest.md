@@ -10,7 +10,7 @@ nav_order: 4
 
 ## import
 
-```
+```python
 import pytest
 ```
 
@@ -18,7 +18,7 @@ import pytest
 
 ## ディレクトリ構成
 
-```bash
+```
 my-project/
 ├── pyproject.toml
 ├── README.md
@@ -50,7 +50,7 @@ my-project/
 
 ## テスト
 
-```Python
+```python
 # src/service.py
 
 def add(x: int, y:int) -> int:
@@ -66,7 +66,7 @@ def divide(x: int, y:int) -> float:
     return x / y
 ```
 
-```Python
+```python
 # tests/test_service.py
 
 from my_package.service import add, subtract, multiply, divide
@@ -109,7 +109,9 @@ def test_divide_by_zero():
 ---
 
 ## mock
+
 本物の処理を偽物に置き換える仕組みであり、主に以下のようなものを置き換える。
+
 - データベース
 - Web API
 - ファイルアクセス
@@ -121,11 +123,13 @@ def test_divide_by_zero():
 ---
 
 ## patch
+
 既存のオブジェクトを置き換える仕組み
 
 ---
 
 ## conftest.py
+
 pytestにおけるテスト共通設定ファイルであり、主に以下のようなものを定義する。
 
 - Fixture
@@ -134,9 +138,7 @@ pytestにおけるテスト共通設定ファイルであり、主に以下の�
 - カスタムマーカー
 - テスト用設定
 
-```Python
-import pytest
-
+```python
 @pytest.fixture
 def sample_data():
     return {"name": "test"}

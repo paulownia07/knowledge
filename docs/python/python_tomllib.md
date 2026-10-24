@@ -14,7 +14,7 @@ nav_order: 4
 
 ## モジュールの読み込み
 
-```Python
+```python
 import tomllib
 ```
 
@@ -24,7 +24,7 @@ import tomllib
 
 ### tomllibファイルの読み込み
 
-```Python
+```python
 with open(file_path, mode="r") as f:
     data = tomllib.load(f)
 
@@ -33,7 +33,7 @@ username = data["default"]["name"]
 
 ### tomllibファイルへの書き込み
 
-```Python
+```python
 with open(file_path, mode="w") as f:
     data = tomllib.load(f)
     data["default"]["age"] = 20

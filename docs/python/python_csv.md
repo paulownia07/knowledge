@@ -14,7 +14,7 @@ nav_order: 4
 
 ## モジュールの読み込み
 
-```Python
+```python
 import csv
 ```
 
@@ -24,14 +24,14 @@ import csv
 
 ### CSVファイルの読み込み
 
-```Python
+```python
 with open("data/example.csv") as f:
     reader = csv.reader(f)
 ```
 
 ### CSVファイルへの書き込み
 
-```Python
+```python
 with open("data/example.csv", "w") as f:
     writer = csv.writer(f)
     #単一行の書き込み
