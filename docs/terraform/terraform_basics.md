@@ -12,13 +12,17 @@ nav_order: 1
 
 1. [Install Terraform](https://developer.hashicorp.com/terraform/install)からバイナリをダウンロードする
 2. バージョンを確認する
-   ```
+
+   ```bash
    terraform -v
    ```
+
 3. タブ補完機能を有効化する
-   ```
+
+   ```bash
    terraform -install-autocomplete
    ```
+
    > [!NOTE]
    > 「386」は32ビットの古いx86アーキテクチャ。
    > 「AMD64(x86-64)」はIntelとAMDが開発した互換性のある64ビットアーキテクチャ。
