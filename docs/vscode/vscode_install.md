@@ -17,10 +17,12 @@ nav_order: 1
 ## Ubuntu
 
 1. 必要なツールをインストールする
+
    ```
    sudo apt update
    sudo apt install -y wget gpg
    ```
+
 2. MicrosoftのGPGキーをダウンロードして保存する
 
    ```
@@ -35,6 +37,7 @@ nav_order: 1
    ```
 
 3. リポジトリを登録する
+
    ```
    echo "Types: deb
    URIs: https://packages.microsoft.com/repos/code
@@ -43,12 +46,16 @@ nav_order: 1
    Architectures: amd64,arm64,armhf
    Signed-By: /usr/share/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/vscode.sources
    ```
+
 4. VSCodeをインストールする
+
    ```
    sudo apt update
    sudo apt install -y code
    ```
+
 5. VSCodeのバージョンを確認する
+
    ```
    code --version
    ```
